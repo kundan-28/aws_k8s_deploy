@@ -16,12 +16,12 @@ spec:
     spec:
       containers:
       - name:  vprormq
-        image:  mabbitmq
+        image:  rabbitmq
         resources:
         env:
         - name: RABBITMQ_DEFAULT_PASS
           valueFrom:
-            configMapKeyRef:
+            secretKeyRef:
               name: app-secret
               key: rmq-pass
         - name: RABBITMQ_DEFAULT_USER

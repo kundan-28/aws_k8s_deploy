@@ -28,7 +28,7 @@ spec:
         env:
         - name: MYSQL_ROOT_PASSWORD
           valueFrom:
-            configMapKeyRef:
+            secretKeyRef:
               name: app-secret
               key: db-pass
         ports:
